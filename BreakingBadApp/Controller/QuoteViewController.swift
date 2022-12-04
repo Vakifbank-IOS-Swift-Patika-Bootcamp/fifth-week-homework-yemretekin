@@ -35,7 +35,7 @@ final class QuoteViewController: BaseViewController {
         let toArray = str?.components(separatedBy: " ")
         let backToString = toArray?.joined(separator: "+")
         Client.getQuotes(author:backToString ?? "", completion: { quotes, error in
-            print(quotes)
+           // print(quotes)
             self.quotes = quotes
             if let error = error {
                 self.showErrorAlert(message: error.localizedDescription) {
